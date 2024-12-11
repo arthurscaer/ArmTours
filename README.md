@@ -2,6 +2,8 @@
 
 Im Rahmen meiner Bachelorarbeit habe ich das Dashboard namens **„ArmTours“** entwickelt. Hierbei handelt es sich um ein System, das von Touristen oder Alleinreisenden genutzt werden kann, um ihre Reise nach Armenien optimal und eigenständig zu planen. Das Dashboard stellt die notwendigen Informationen bereit, die für die Reiseplanung hilfreich sind. Das System kann jedoch auch auf andere Länder übertragen werden.
 
+Das Dashboard soll die ältesten armenischen Kirchen und Sehenswürdigkeiten vorstellen. Neben den historischen Informationen werden auch weitere nützliche Details bereitgestellt, wie die Adresse des Ortes, Öffnungszeiten und zusätzliche Hinweise, die Touristen für ihre Reise benötigen können. Ein zentrales Ziel des Projekts ist es, Armenien den Menschen näherzubringen, die wenig über dieses Land wissen. Da Armenien das erste Land ist, das das Christentum als Staatsreligion akzeptiert hat, stehen die ältesten Kirchen an erster Stelle. Ergänzend dazu können auch Sehenswürdigkeiten erkundet werden, die eine wichtige geschichtliche Bedeutung haben und Touristen als Anreiz dienen können.
+
 Eine nähere Betrachtung der Funktionalitäten dieses Dashboards wird weiter unten ausführlich beschrieben.
 
 ## Installationsschritte
