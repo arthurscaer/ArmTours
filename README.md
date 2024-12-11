@@ -36,3 +36,28 @@ $ npm run serve
 ```
 
 Jetzt sollte das Frontend erfolgreich gestartet sein, und es kann über [http://localhost:8080/](http://localhost:8080/) aufgerufen werden.
+
+## Nutzung des Dashboards
+
+Nach dem Start wird das Dashboard zunächst leer sein, da keine Datenbankmigration eingerichtet ist und die Datenbank in der lokalen Anwendung leer ist. Daher wird beim Aufruf von `http://localhost:8080` zunächst nur eine leere Scrollleiste angezeigt. Unter dieser Scrollleiste befindet sich die Karte von Armenien, die in Provinzen unterteilt ist. 
+
+Wenn man auf eine Provinz klickt, werden dort vorgeschlagene Orte angezeigt. Allerdings sind diese zu Beginn leer, da lokal noch keine Orte hinzugefügt wurden. Um das System vollständig zu testen, kann man sich zunächst registrieren. Danach muss man sich in der lokalen Datenbank anmelden (die Zugangsdaten werden später bereitgestellt) und die Rolle des neu erstellten Benutzers von `user` auf `supersuperuser` ändern. 
+
+Nun hat man die Rechte, neue Orte in das Dashboard hinzuzufügen. Sobald ein neuer Ort hinzugefügt wurde, kann man diesen kommentieren, auf bestehende Kommentare antworten, Kommentare bewerten und den Ort selbst bewerten. Die Bewertung von Kommentaren ist einfacher im Vergleich zur Bewertung von Orten. 
+
+Zusätzlich besteht die Möglichkeit, einen Ort zu einer Sammlung hinzuzufügen. Dafür muss man zunächst in seinem Profil eine Sammlung erstellen. Im Profilbereich kann der Benutzer außerdem Änderungen vornehmen, wie beispielsweise den Vor- und Nachnamen oder das Geburtsdatum bearbeiten. Der Benutzer kann auch ein Profilbild hochladen, das auf verschiedenen Seiten des Dashboards angezeigt wird. 
+
+Darüber hinaus kann der Benutzer die Orte in den erstellten Sammlungen einsehen, direkt von dort aus besuchen oder sie aus der Sammlung entfernen. Die geschriebenen Kommentare werden ebenfalls im Profilbereich angezeigt, sodass der Benutzer direkt zu dem Ort weitergeleitet werden kann, an dem der Kommentar verfasst wurde.
+
+### Rollen im Dashboard
+
+Das Dashboard verfügt über drei Rollen: `supersuperuser`, `superuser` und `user`. 
+
+- **`supersuperuser`**: Hat die vollständige Kontrolle über das Dashboard und kann auf das Admin-Panel zugreifen, in dem alle registrierten Nutzer des Dashboards aufgelistet sind. Der `supersuperuser` kann Nutzer zu `superusern` ernennen, `superuser` zu `usern` herabstufen oder Nutzer komplett aus der Datenbank löschen.
+- **`superuser`**: Dient als Moderator und hat ähnliche Funktionen wie der `supersuperuser`, jedoch ohne Zugriff auf das Admin-Panel.
+- **`user`**: Kann Kommentare schreiben, Orte bewerten und Sammlungen erstellen, hat jedoch keine moderierenden Funktionen.
+
+### Kommentare und Bewertungen
+
+In den angezeigten Orten werden standardmäßig nur die letzten drei Kommentare und Bewertungen angezeigt. Wenn weitere oder ältere Kommentare und Bewertungen vorhanden sind, erscheint ein Button, mit dem ein Popup geöffnet werden kann. In diesem Popup können alle geschriebenen Kommentare und Bewertungen eingesehen werden.
+
