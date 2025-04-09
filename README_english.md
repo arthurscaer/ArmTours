@@ -66,6 +66,61 @@ By default, only the three most recent comments and reviews are shown on a detai
 
 ---
 
+## Additional Features
+
+The application offers extra features beyond basic requirements. Users can edit their first name, last name, and birth date — the username remains unchanged. They can also upload a profile picture which appears throughout the dashboard.
+
+The profile page shows all comments made by the user, along with direct links to the commented site.
+
+Superusers (moderators) can delete inappropriate comments and ratings. Ratings include a comment field, which is also subject to moderation.
+
+## Non-Functional Requirements
+
+### User-Friendliness
+
+The dashboard is user-friendly with an intuitive navigation system. Each page includes a brief textual introduction. Visual cues such as color-coded buttons (e.g., red delete buttons) enhance the user experience.
+
+### Responsive Layout
+
+Thanks to responsive design, the dashboard adapts to various screen sizes:
+
+- On standard screens, content is evenly distributed.
+- On large screens, content scales down to show more information.
+- On small screens (e.g., mobile devices), content is stacked vertically for readability and clarity.
+
+### Access Control
+
+The system uses a role-based access model:
+
+- Unregistered users cannot access protected features like commenting, rating, or creating collections.
+- Attempting these actions redirects the user to the login page or shows an informational message.
+- Only Superusers and Supersuperusers can access the admin panel and moderation tools.
+
+---
+
+## Implementation Details
+
+Due to the complexity of both functional and non-functional requirements, appropriate technologies were selected to ensure an efficient and maintainable implementation.
+
+### Frontend with Vue 3
+
+The frontend is built with Vue 3, a modern JavaScript framework ideal for creating interactive web interfaces. Its modular structure enables the development of self-contained components, simplifying testing and prioritization. This is especially useful for the dashboard, which consists of clearly separated features.
+
+### Navigation with Vue Router
+
+Vue Router handles navigation between different views (e.g., main page, detail pages for churches/landmarks, profile, login/register). It supports dynamic routing based on the current URL, ensuring a user-friendly and scalable navigation experience.
+
+### State Management with Vuex
+
+Vuex is used to manage global application state (e.g., ratings, comments, user data, church and landmark data). Thanks to Vuex modules, the state store is divided into manageable sections, improving clarity and maintainability.
+
+### Backend with Node.js
+
+The backend is powered by Node.js, a server-side JavaScript runtime. It allows for a unified language across the frontend and backend. Node.js is ideal for real-time applications and asynchronous operations, such as API fetches. With the support of the npm ecosystem, development is accelerated with access to a wide range of libraries.
+
+### Data Storage with MySQL
+
+The system uses MySQL, a reliable relational database, ideal for handling structured data like user profiles, comments, ratings, and church info. Its stability and popularity make it a solid choice for this project.
 
 
 
