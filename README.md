@@ -91,6 +91,8 @@ Das System implementiert ein klares, **rollenbasiertes Berechtigungskonzept**.
 - Der Versuch solcher Aktionen führt zur **Weiterleitung auf die Login-Seite** oder zu einer **Hinweisnachricht**.  
 - Zugriff auf das **Adminpanel** und **Moderationsfunktionen** ist ausschließlich **Superusern und Supersuperusern** vorbehalten.
 
+---
+
 ## Implementierungsmöglichkeiten
 
 Da das Dashboard sowohl komplexe funktionale als auch nicht-funktionale Anforderungen erfüllt, ist es wichtig, geeignete Technologien auszuwählen, die die Umsetzung effizient und nachhaltig ermöglichen.
