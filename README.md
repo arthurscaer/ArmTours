@@ -5,4 +5,4 @@ Welcome to the **Project Title** repository! This project provides an intuitive 
 Please select the language you prefer:
 
 - [Deutsch](./README_deutsch.md) - Die Dokumentation auf Deutsch ist hier verfügbar.
-- [English](#english) - The English documentation is available here.
+- [English](./README_english.md) - The English documentation is available here.
