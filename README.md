@@ -61,3 +61,34 @@ Das Dashboard verfügt über drei Rollen: `supersuperuser`, `superuser` und `use
 
 In den angezeigten Orten werden standardmäßig nur die letzten drei Kommentare und Bewertungen angezeigt. Wenn weitere oder ältere Kommentare und Bewertungen vorhanden sind, erscheint ein Button, mit dem ein Popup geöffnet werden kann. In diesem Popup können alle geschriebenen Kommentare und Bewertungen eingesehen werden.
 
+## Zusatzfunktionen
+
+Die Anwendung bietet zusätzliche Funktionen, die über die explizit genannten Anforderungen hinausgehen. Nutzer können ihr Profil bearbeiten, wobei sie **Name**, **Vorname** und **Geburtsdatum** ändern dürfen – der **Benutzername bleibt unveränderbar**. Zudem besteht die Möglichkeit, ein **eigenes Profilbild hochzuladen**, das bei verschiedenen Interaktionen im Dashboard angezeigt wird.
+
+Auf der **Profilseite** sind alle vom Nutzer verfassten **Kommentare** einsehbar, inklusive direkter **Links zur jeweiligen Seite**, auf der der Kommentar geschrieben wurde.
+
+**Superuser**, die auch als **Moderatoren** agieren, haben die Berechtigung, unangemessene **Kommentare und Bewertungen zu löschen**. Bewertungen enthalten ein zusätzliches **Textfeld für persönliche Meinungen**, welches im Dashboard angezeigt wird und ebenfalls moderiert werden kann.
+
+---
+
+## Nicht-funktionale Anforderungen
+
+### Benutzerfreundlichkeit
+
+Das Dashboard ist **benutzerfreundlich gestaltet** und bietet eine **intuitive Navigation**. Jede Seite enthält eine **kurze textliche Einführung zur Orientierung**. Visuelle Hinweise wie farblich hervorgehobene Buttons – etwa ein **roter Button zum Löschen von Kommentaren** – verbessern die Nutzererfahrung zusätzlich.
+
+### Flexible Layouts
+
+Dank **responsivem Design** passt sich das Dashboard automatisch an verschiedene **Bildschirmgrößen** an.  
+- Auf **Standard-Bildschirmen** sind Inhalte gleichmäßig verteilt.  
+- Auf **großen Bildschirmen** werden Inhalte verkleinert, um **mehr Informationen gleichzeitig darzustellen**.  
+- Auf **kleinen Geräten** wie Smartphones werden die Inhalte **untereinander angeordnet**, um Übersichtlichkeit und Lesbarkeit zu gewährleisten.
+
+### Zugriffskontrollen
+
+Das System implementiert ein klares, **rollenbasiertes Berechtigungskonzept**.  
+- **Nicht registrierte Nutzer** haben keinen Zugriff auf geschützte Funktionen wie das **Verfassen von Kommentaren**, **Bewertungen** oder das **Erstellen von Sammlungen**.  
+- Der Versuch solcher Aktionen führt zur **Weiterleitung auf die Login-Seite** oder zu einer **Hinweisnachricht**.  
+- Zugriff auf das **Adminpanel** und **Moderationsfunktionen** ist ausschließlich **Superusern und Supersuperusern** vorbehalten.
+
+
