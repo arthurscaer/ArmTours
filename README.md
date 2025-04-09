@@ -91,4 +91,29 @@ Das System implementiert ein klares, **rollenbasiertes Berechtigungskonzept**.
 - Der Versuch solcher Aktionen führt zur **Weiterleitung auf die Login-Seite** oder zu einer **Hinweisnachricht**.  
 - Zugriff auf das **Adminpanel** und **Moderationsfunktionen** ist ausschließlich **Superusern und Supersuperusern** vorbehalten.
 
+## Implementierungsmöglichkeiten
+
+Da das Dashboard sowohl komplexe funktionale als auch nicht-funktionale Anforderungen erfüllt, ist es wichtig, geeignete Technologien auszuwählen, die die Umsetzung effizient und nachhaltig ermöglichen.
+
+### Frontend mit Vue 3
+
+Für das Frontend kommt **Vue 3** zum Einsatz – ein leistungsfähiges und vielseitiges JavaScript-Framework zur Erstellung moderner Web-Benutzeroberflächen. Eine der größten Stärken von Vue 3 liegt in seiner **Flexibilität**, die es ermöglicht, das Projekt in **viele kleinere, modulare Abschnitte zu unterteilen**. So lassen sich einzelne Komponenten unabhängig voneinander entwickeln, priorisieren und testen, ohne andere Funktionen negativ zu beeinflussen. Diese Trennung der Zuständigkeiten ist besonders hilfreich, da das Dashboard eine Vielzahl an klar voneinander abgegrenzten Features enthält.
+
+### Navigation mit Vue Router
+
+Die Navigation innerhalb der Anwendung wird durch den **Vue Router** gesteuert – einem offiziellen Routing-Tool für Vue.js. Da das Dashboard verschiedene Seiten bietet, wie eine **Hauptseite**, **individuelle Kirchen- und Sehenswürdigkeitsseiten**, eine **Profilseite**, sowie **Login- und Registrierungsansichten**, ist eine saubere Navigation mit **dynamischen Routen** essenziell. Vue Router ermöglicht es, Inhalte basierend auf der aktuellen URL zu laden, was eine nutzerfreundliche und skalierbare Struktur schafft.
+
+### Zustandsverwaltung mit Vuex
+
+Zur Verwaltung des globalen Zustands der Anwendung wird **Vuex** verwendet – eine zentrale Datenablage, auf die verschiedene Komponenten zugreifen können. Funktionen wie **Bewertungen**, **Kommentare**, **Benutzerinformationen** sowie **Kirchen- und Sehenswürdigkeitsdaten** lassen sich effizient in einem gemeinsamen Store verwalten. Dank der **Modularisierungsmöglichkeiten von Vuex** kann der Store in Teilbereiche untergliedert werden, was sowohl die Wartbarkeit als auch die Übersichtlichkeit bei wachsender Komplexität erhöht.
+
+### Backend mit Node.js
+
+Im Backend wird auf **Node.js** gesetzt – eine serverseitige JavaScript-Laufzeitumgebung, die es ermöglicht, sowohl Frontend als auch Backend mit derselben Sprache zu realisieren. Node.js eignet sich hervorragend für **Echtzeitanwendungen** und unterstützt **asynchrone Programmierung**, was besonders bei der Nutzung von **Fetch-APIs** im Frontend wichtig ist, um die Benutzeroberfläche reaktionsfähig zu halten. Darüber hinaus bietet das **npm-Ökosystem** eine Vielzahl nützlicher Bibliotheken, die die Entwicklung beschleunigen und gängige Aufgaben deutlich vereinfachen.
+
+### Datenhaltung mit MySQL
+
+Für die Datenbank kommt **MySQL** zum Einsatz – ein bewährtes relationales Datenbanksystem, das sich besonders für strukturierte Daten eignet. Durch seine Stabilität und weite Verbreitung ist es gut geeignet für die Speicherung und Verwaltung der vielfältigen Inhalte des Dashboards, wie etwa Nutzerprofile, Kommentare, Bewertungen und Kircheninformationen.
+
+
 
